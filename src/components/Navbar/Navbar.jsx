@@ -3,11 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 
 const navLink = <>
 <li className="text-lg text-emerald-500"><NavLink to={"/"}>Home</NavLink></li>
-<li className="text-lg text-emerald-500"><NavLink to={"/addProducts"}>Add Job</NavLink></li>
-<li className="text-lg text-emerald-500"><NavLink to={"/myCart"}>My Posted Jobs</NavLink></li>
-<li className="text-lg text-emerald-500"><NavLink to={"/myCart"}>My Bids</NavLink></li>
-<li className="text-lg text-emerald-500"><NavLink to={"/myCart"}>Bid Requests</NavLink></li>
-<li className="text-lg text-emerald-500"><NavLink to={"/myCart"}>Login</NavLink></li>
+<li className="text-lg text-emerald-500"><NavLink to={"/addJob"}>Add Job</NavLink></li>
+<li className="text-lg text-emerald-500"><NavLink to={"/myPostedJobs"}>My Posted Jobs</NavLink></li>
+<li className="text-lg text-emerald-500"><NavLink to={"/myBids"}>My Bids</NavLink></li>
+<li className="text-lg text-emerald-500"><NavLink to={"/bidRequests"}>Bid Requests</NavLink></li>
+<li className="text-lg text-emerald-500"><NavLink to={"/login"}>Login</NavLink></li>
 </>
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
   <div className="navbar-start">
    
     <img className="w-12 rounded-full" src={'https://i.ibb.co/cJ7p49K/brand-Logo.jpg'} alt="" />
-    <a className="btn btn-ghost normal-case text-3xl font-bold text-emerald-500">SmileShop</a>
+    <a className="btn btn-ghost normal-case text-3xl font-bold text-emerald-500">OnlineMarket</a>
   </div>
  
   <div className="navbar-end">
