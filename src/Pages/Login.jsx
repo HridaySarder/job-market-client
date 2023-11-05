@@ -1,8 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from 'react-icons/fc';
 import { toast } from "react-toastify";
+import { useContext } from "react";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Login = () => {
+
+  const { signInWithGoogle,signIn} = useContext(AuthContext)
+
+const location = useLocation();
+const navigate = useNavigate();
 
   const handleLogin = e => {
     e.preventDefault();
@@ -40,6 +47,16 @@ const Login = () => {
   
     })
   }
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   return (
     <div className="bg-[#F4F3F0] mb-10">
@@ -87,7 +104,7 @@ const Login = () => {
         </Link>
       </p>
       <p className="py-5">
-        <button className="flex justify-center items-center mx-auto btn btn-outline font-bold">
+        <button onClick={handleGoogleSignIn} className="flex justify-center items-center mx-auto btn btn-outline font-bold">
         Sign in With <FcGoogle className="text-4xl ml-5"></FcGoogle>
         </button>
       </p>

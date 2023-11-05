@@ -1,10 +1,14 @@
-import { useState } from "react";
+/* eslint-disable no-useless-escape */
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { AuthContext } from "../providers/AuthProvider";
+import "react-toastify/dist/ReactToastify.css";
 
 
 const Register = () => {
 
+  const {createUser} = useContext(AuthContext)
   const [registrationStatus,setRegistrationStatus] = useState({
     success:false,
     error:"",
@@ -13,10 +17,11 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
-    const photo = e.target.photo.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+    const photo = e.target.photo.value;
 
+    console.log(name,email,password,photo);
     
     if (password.length < 6) {
       setRegistrationStatus({
@@ -119,7 +124,7 @@ e.target.reset()
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Image</span>
+            <span className="label-text">PhotoURL</span>
           </label>
           <input
             type="text"

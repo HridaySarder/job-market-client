@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const navLink = <>
@@ -7,10 +9,19 @@ const navLink = <>
 <li className="text-lg text-emerald-500"><NavLink to={"/myPostedJobs"}>My Posted Jobs</NavLink></li>
 <li className="text-lg text-emerald-500"><NavLink to={"/myBids"}>My Bids</NavLink></li>
 <li className="text-lg text-emerald-500"><NavLink to={"/bidRequests"}>Bid Requests</NavLink></li>
-<li className="text-lg text-emerald-500"><NavLink to={"/login"}>Login</NavLink></li>
+{/* <li className="text-lg text-emerald-500"><NavLink to={"/login"}>Login</NavLink></li> */}
 </>
 
 const Navbar = () => {
+
+  const {user,logOut} = useContext(AuthContext)
+
+  const handleLogOut = () => {
+    logOut()
+    .then()
+    .catch()
+  }
+
   return (
     <div className="navbar bg-base-100">
   <div className="navbar-start">
@@ -40,7 +51,7 @@ const Navbar = () => {
   </div>
 
 
-  {/* {user ? (
+  {user ? (
           <div className="flex items-center space-x-2">
             <img
               src={user.photoURL} 
@@ -48,15 +59,15 @@ const Navbar = () => {
               className="h-10 w-10 rounded-full"
             />
             <span className="text-lg">{user.email}</span>
-            <button onClick={handleLogOut} className="btn text-lg text-emerald-500">
+            <button onClick={handleLogOut} className="text-lg text-emerald-500">
               Logout
             </button>
           </div>
         ) : (
           <Link to={"/login"}>
-            <button className="btn text-emerald-500 text-lg">Login</button>
+            <button className="text-emerald-500 text-lg">Login</button>
           </Link>
-        )} */}
+        )}
   </div>
 </div>
   );
