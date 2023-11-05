@@ -13,11 +13,13 @@ import MyBids from './Pages/MyBids';
 import BidRequests from './Pages/BidRequests';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import Error from './Pages/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Root></Root> ,
+    errorElement:<Error></Error>,
     children:[
       {
         path:"/",

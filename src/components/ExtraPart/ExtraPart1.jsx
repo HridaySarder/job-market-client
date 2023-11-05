@@ -21,7 +21,7 @@ const ExtraPart1 = () => {
   ];
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mb-8 mx-auto p-4">
     <h2 className="text-2xl font-bold mb-4 text-center">People Reviews</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {reviews.map((review, index) => (
