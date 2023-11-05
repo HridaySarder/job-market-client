@@ -14,6 +14,8 @@ import BidRequests from './Pages/BidRequests';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import Error from './Pages/Error';
+import AuthProvider from './providers/AuthProvider';
+import { ToastContainer } from 'react-toastify';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +59,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
     <RouterProvider router={router} />
+    </AuthProvider>
+    <ToastContainer></ToastContainer>
   </React.StrictMode>,
 )
