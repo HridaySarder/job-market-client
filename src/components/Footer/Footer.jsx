@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 py-8 rounded mt-3 mb-3">
+    <footer className="bg-gray-900 px-10 py-20 rounded mt-3 mb-3">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-center justify-between">
           <div className="w-full md:w-1/4 mb-4 md:mb-0">
@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="w-full md:w-1/4 mb-4 md:mb-0">
             <h4 className="text-white font-bold mb-2">Contact Us</h4>
             <p className="text-gray-400">123 Main Street, City</p>
-            <p className="text-gray-400">Email: info@jobMarket.com</p>
+            <p className="text-gray-400">Email: info@jobMarketas.com</p>
             <p className="text-gray-400">Phone: 123-456-7890</p>
           </div>
           <div className="w-full md:w-1/4 mb-4 md:mb-0">

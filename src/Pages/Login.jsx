@@ -52,9 +52,31 @@ const navigate = useNavigate();
     signInWithGoogle()
       .then((result) => {
         console.log(result.user);
+
+        toast.success("Login Successful", {
+          position: "top-right",
+          autoClose: 3000, 
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+    
+        navigate(location?.state ? location.state : "/");
+
       })
       .catch((error) => {
         console.error(error);
+
+        toast.error("Login Failed. Please provide correct information.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+
       });
   };
 

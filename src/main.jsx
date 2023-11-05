@@ -16,6 +16,8 @@ import Register from './Pages/Register';
 import Error from './Pages/Error';
 import AuthProvider from './providers/AuthProvider';
 import { ToastContainer } from 'react-toastify';
+import PrivateRoute from './routes/PrivateRoute';
+import JobDetails from './Pages/JobDetails';
 
 const router = createBrowserRouter([
   {
@@ -29,21 +31,24 @@ const router = createBrowserRouter([
       },
       {
         path:"/addJob",
-        element:<AddJob></AddJob>
+        element:<PrivateRoute><AddJob></AddJob></PrivateRoute>
       },
       {
         path:"/myPostedJobs",
-        element:<MyPostedJobs></MyPostedJobs>
+        element:<PrivateRoute><MyPostedJobs></MyPostedJobs></PrivateRoute>
       },
       {
         path:"/myBids",
-        element:<MyBids></MyBids>
+        element:<PrivateRoute><MyBids></MyBids></PrivateRoute>
       },
       {
         path:"/bidRequests",
-        element:<BidRequests></BidRequests>
+        element:<PrivateRoute><BidRequests></BidRequests></PrivateRoute>
       },
-      
+      {
+        path:"/jobDetials",
+        element:<JobDetails></JobDetails>
+      },
       {
         path:"/login",
         element:<Login></Login>
