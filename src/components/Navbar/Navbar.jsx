@@ -15,8 +15,8 @@ const Navbar = () => {
     <div className="navbar bg-base-100">
   <div className="navbar-start">
    
-    <img className="w-12 rounded-full" src={'https://i.ibb.co/cJ7p49K/brand-Logo.jpg'} alt="" />
-    <a className="btn btn-ghost normal-case text-3xl font-bold text-emerald-500">OnlineMarket </a>
+    <img className="w-12 rounded-full" src={'https://i.ibb.co/4YnvK1z/favicon-Online.jpg'} alt="" />
+    <a className=" normal-case text-3xl font-bold text-emerald-500">OnlineMarketPlace </a>
   </div>
  
   <div className="navbar-end">
