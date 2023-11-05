@@ -127,7 +127,7 @@ const navigate = useNavigate();
       </p>
       <p className="py-5">
         <button onClick={handleGoogleSignIn} className="flex justify-center items-center mx-auto btn btn-outline font-bold">
-        Sign in With <FcGoogle className="text-4xl ml-5"></FcGoogle>
+        Sign in With Google<FcGoogle className="text-4xl ml-5"></FcGoogle>
         </button>
       </p>
     </div>

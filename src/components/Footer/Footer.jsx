@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 px-10 py-20 rounded mt-3 mb-3">
+    <footer className="bg-gray-900 px-10 py-20 w-full rounded mt-3 mb-3">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-center justify-between">
           <div className="w-full md:w-1/4 mb-4 md:mb-0">
