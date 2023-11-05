@@ -16,7 +16,7 @@ const Navbar = () => {
   <div className="navbar-start">
    
     <img className="w-12 rounded-full" src={'https://i.ibb.co/4YnvK1z/favicon-Online.jpg'} alt="" />
-    <a className=" normal-case text-3xl font-bold text-emerald-500">OnlineMarketPlace </a>
+    <a className=" normal-case text-3xl font-bold text-emerald-500">JobMarket </a>
   </div>
  
   <div className="navbar-end">
