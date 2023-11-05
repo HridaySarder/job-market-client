@@ -9,7 +9,7 @@ const navLink = <>
 <li className="text-lg text-emerald-500"><NavLink to={"/myPostedJobs"}>My Posted Jobs</NavLink></li>
 <li className="text-lg text-emerald-500"><NavLink to={"/myBids"}>My Bids</NavLink></li>
 <li className="text-lg text-emerald-500"><NavLink to={"/bidRequests"}>Bid Requests</NavLink></li>
-{/* <li className="text-lg text-emerald-500"><NavLink to={"/login"}>Login</NavLink></li> */}
+
 </>
 
 const Navbar = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
   <div className="navbar-start">
    
     <img className="w-12 rounded-full" src={'https://i.ibb.co/4YnvK1z/favicon-Online.jpg'} alt="" />
-    <a className=" normal-case text-3xl font-bold text-emerald-500">JobMarket </a>
+    <a className=" normal-case text-3xl font-bold text-emerald-500 ml-2">JobMarket </a>
   </div>
  
   <div className="navbar-end">
