@@ -1,7 +1,12 @@
+import {  useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 
 
 const AddJob = () => {
+
+  // const location = useLocation();
+const navigate = useNavigate();
 
   const handleAddJob = event => {
     event.preventDefault();
@@ -18,6 +23,40 @@ const AddJob = () => {
   
   const newJob = {email,jobTitle,deadLine,description,category,minimumPrice,maximumPrice}
   console.log(newJob);
+
+  const addJob ={
+    email:email,
+    jobTitle:jobTitle,
+    deadLine:deadLine,
+    description:description,
+    category:category,
+    minimumPrice:minimumPrice,
+    maximumPrice:maximumPrice
+  }
+
+  fetch('http://localhost:5000/addJobs',{
+    method:'POST',
+    headers:{
+      'content-type':'application/json'
+    },
+    body:JSON.stringify(addJob)
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+    if(data.insertedId){
+      toast.success("Job added Successfully", {
+        position: "top-right",
+        autoClose: 3000, 
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+  
+      navigate("/myPostedJobs");
+    }
+  })
 
   }
 

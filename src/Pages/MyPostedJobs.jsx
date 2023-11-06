@@ -4,7 +4,7 @@
 const MyPostedJobs = () => {
   return (
     <div>
-      My posted jobs
+      
     </div>
   );
 };
