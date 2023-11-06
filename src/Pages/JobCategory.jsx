@@ -17,16 +17,16 @@ const JobCategory = () => {
   const uniqueCategories = [...new Set(categoryJobs.map((job) => job.category))];
     const [activeTab, setActiveTab] = useState(uniqueCategories[1]);
   
-    const handleTabSelect = (tabName) => {
-      setActiveTab(tabName);
-    };
+    // const handleTabSelect = (tabName) => {
+    //   setActiveTab(tabName);
+    // };
 
   return (
     <div className="my-10">
-      <h1 className="text-5xl text-center font-bold">Job Category</h1>
+      <h1 className="text-5xl text-center font-bold my-5">Job Category</h1>
       <Tabs>
-      selectedIndex={uniqueCategories.findIndex((category) => category === activeTab)}
-          onSelect={(index) => handleTabSelect(uniqueCategories[index])}
+      {/* selectedIndex={uniqueCategories.findIndex((category) => category === activeTab)} */}
+          {/* onSelect={(index) => handleTabSelect(uniqueCategories[index])} */}
 
     <TabList className="flex justify-center mt-5">
     {uniqueCategories.map((category) => (
