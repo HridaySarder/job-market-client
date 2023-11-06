@@ -1,0 +1,86 @@
+ [  
+        {
+          "category": "Web Development",
+          "title": "Web Developer",
+          "deadline": "November 15, 2023",
+          "priceRange": "$800 - $1,200",
+          "shortDescription": "Create a modern website for an e-commerce business."
+        },
+        {
+          "category": "Web Development",
+          "title": "Front-End Developer",
+          "deadline": "November 20, 2023",
+          "priceRange": "$500 - $900",
+          "shortDescription": "Design and develop the user interface for a web application."
+        },
+        {
+          "category": "Web Development",
+          "title": "Back-End Developer",
+          "deadline": "November 25, 2023",
+          "priceRange": "$600 - $1,000",
+          "shortDescription": "Implement server-side logic for a web application."
+        },
+        {
+          "category": "Web Development",
+          "title": "Full-Stack Developer",
+          "deadline": "November 30, 2023",
+          "priceRange": "$1,000 - $1,800",
+          "shortDescription": "Develop both front-end and back-end components of a web project."
+        },    
+        {
+          "category": "Digital Marketing",
+          "title": "Social Media Manager",
+          "deadline": "December 5, 2023",
+          "priceRange": "$400 - $700",
+          "shortDescription": "Manage and grow social media presence for a small business."
+        },
+        {
+          "category": "Digital Marketing",
+          "title": "SEO Specialist",
+          "deadline": "December 10, 2023",
+          "priceRange": "$300 - $600",
+          "shortDescription": "Optimize website content for search engines."
+        },
+        {
+          "category": "Digital Marketing",
+          "title": "Email Marketing Coordinator",
+          "deadline": "December 15, 2023",
+          "priceRange": "$250 - $500",
+          "shortDescription": "Create and execute email marketing campaigns."
+        },
+        {
+          "category": "Digital Marketing",
+          "title": "PPC Advertising Manager",
+          "deadline": "December 20, 2023",
+          "priceRange": "$500 - $900",
+          "shortDescription": "Manage pay-per-click advertising campaigns."
+        },
+        {
+          "category": "Graphics Design",
+          "title": "Logo Designer",
+          "deadline": "December 25, 2023",
+          "priceRange": "$100 - $300",
+          "shortDescription": "Design a unique logo for a startup."
+        },
+        {
+          "category": "Graphics Design",
+          "title": "Graphic Illustrator",
+          "deadline": "December 30, 2023",
+          "priceRange": "$200 - $400",
+          "shortDescription": "Create custom illustrations for a children's book."
+        },
+        {
+          "category": "Graphics Design",
+          "title": "Branding Designer",
+          "deadline": "January 5, 2024",
+          "priceRange": "$300 - $600",
+          "shortDescription": "Develop branding materials for a new company."
+        },
+        {
+          "category": "Graphics Design",
+          "title": "Packaging Designer",
+          "deadline": "January 10, 2024",
+          "priceRange": "$150 - $350",
+          "shortDescription": "Design product packaging for a consumer brand."
+        }
+      ]
