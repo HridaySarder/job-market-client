@@ -26,7 +26,7 @@ const Navbar = () => {
     <div className="navbar bg-base-100">
   <div className="navbar-start">
    
-    <img className="w-12 rounded-full" src={'https://i.ibb.co/4YnvK1z/favicon-Online.jpg'} alt="" />
+    <img className="w-12 rounded-lg" src={'https://i.ibb.co/rdycLRy/job-Marketplace-Logo.png'} alt="" />
     <a className=" normal-case text-3xl font-bold text-emerald-500 ml-2">JobMarket </a>
   </div>
  
@@ -52,7 +52,7 @@ const Navbar = () => {
 
 
   {user ? (
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-2">
             <img
               src={user.photoURL} 
               alt={user.displayName}

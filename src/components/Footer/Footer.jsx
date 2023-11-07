@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-wrap items-center justify-between">
           <div className="w-full md:w-1/4 mb-4 md:mb-0">
            <div className="flex items-center">
-           <img className="w-12 rounded-full" src={'https://i.ibb.co/4YnvK1z/favicon-Online.jpg'} alt="" />
+           <img className="w-12 rounded-lg" src={'https://i.ibb.co/rdycLRy/job-Marketplace-Logo.png'} alt="" />
     <a className=" normal-case text-3xl font-bold text-emerald-500">JobMarket </a>
            </div>
             <p className="text-white mt-2">
