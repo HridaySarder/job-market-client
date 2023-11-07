@@ -1,38 +1,36 @@
 /* eslint-disable react/prop-types */
 
 
-const JobRow = ({job}) => {
 
-  const {email,jobTitle,deadLine,description,category,minimumPrice,maximumPrice} = job;
+
+const JobRow = ({job,handleDelete}) => {
+
+  const {_id,email,jobTitle,deadLine,description,category,minimumPrice,maximumPrice} = job;
+
+ 
 
   return (
-    <tr className="mb-10">
-    <th>
-      <label>
-        <button className="btn btn-error">X</button>
-      </label>
-    </th>
-    <td>
-      <div className="flex items-center">
-      {email}
-       
-      </div>
-    </td>
-    <td>
-      {jobTitle}
-    </td>
-    <td>
-     {deadLine}
-     
-    </td>
-    <td>{description}</td>
-    <td>{category}</td>
-    <td>{minimumPrice}</td>
-    <td>{maximumPrice}</td>
-    <th>
-      <button className="btn btn-ghost btn-xs">details</button>
-    </th>
-  </tr>
+    <div>
+      <div data-aos="zoom-in-right" className="card h-80 bg-base-100 shadow-xl space-y-3">
+  <div className="card-body">
+    <h2 className="card-title">{email}</h2>
+    <p>Title: {jobTitle}</p>
+    <p>Deadline: {deadLine}</p>
+    <p>{description}</p>
+    <p>Category: {category}</p>
+    <p> Minimum Pice: {minimumPrice}</p>
+    <p> Maximum Pice: {maximumPrice}</p>
+    
+    
+    <div className="flex justify-between">
+    <button onClick={handleDelete} className="btn btn-secondary">Delete</button>
+    <button  className="btn btn-secondary">Update</button>
+    </div>
+    
+    
+  </div>
+</div>
+    </div>
   );
 };
 

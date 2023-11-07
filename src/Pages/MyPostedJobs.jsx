@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import JobRow from "../components/JobRow/JobRow";
+import { toast } from "react-toastify";
 
 
 
@@ -14,39 +15,46 @@ useEffect(() => {
   fetch(url)
   .then(res => res.json())
   .then(data => setPostedJob(data))
-},[])
+},[url])
+
+const handleDelete = id => {
+  const proceed = confirm('Are you sure you want to delete');
+  if(proceed){
+    fetch(`http://localhost:5000/addJobs/${id}`, {
+      method:'DELETE'
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      if(data.deletedCount > 0){
+        toast.err("Job deleted Successfully", {
+          position: "top-right",
+          autoClose: 3000, 
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+        const remaining = postedJob.filter(job => job._id !== id);
+        setPostedJob(remaining)
+      }
+    })
+  }
+}
 
   return (
-    <div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
     
 
-      
-  <table className="table table-xs">
-  <thead>
-      <tr>
-        <th>
-         
-        </th>
-        <th className="text-xl text-violet-600">Email</th>
-        <th className="text-xl text-violet-600">Title</th>
-        <th className="text-xl text-violet-600">Deadlin</th>
-        <th className="text-xl text-violet-600">Description</th>
-        <th className="text-xl text-violet-600">Category</th>
-        <th className="text-xl text-violet-600">Minimum Price</th>
-        <th className="text-xl text-violet-600">Maximum Price</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
+ 
       {
         postedJob.map(job => <JobRow 
         key={job._id}
         job={job}
+        handleDelete={handleDelete}
         ></JobRow>)
       }
    
-  </tbody>
-  </table>
 
 
     </div>
