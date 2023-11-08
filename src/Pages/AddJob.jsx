@@ -35,7 +35,7 @@ const navigate = useNavigate();
     maximumPrice:maximumPrice
   }
 
-  fetch('http://localhost:5000/addJobs',{
+  fetch('https://assignment-11-server-site-khaki.vercel.app/addJobs',{
     method:'POST',
     headers:{
       'content-type':'application/json'

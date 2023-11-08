@@ -10,7 +10,7 @@ const MyPostedJobs = () => {
 const {user} = useContext(AuthContext);
 const [postedJob,setPostedJob] = useState([]);
 
-const url = `http://localhost:5000/addJobs?email=${user?.email}`
+const url = `https://assignment-11-server-site-khaki.vercel.app/addJobs?email=${user?.email}`
 
 useEffect(() => {
   fetch(url)
@@ -21,7 +21,7 @@ useEffect(() => {
 const handleDelete = id => {
   const proceed = confirm('Are you sure you want to delete');
   if(proceed){
-    fetch(`http://localhost:5000/addJobs/${id}`, {
+    fetch(`https://assignment-11-server-site-khaki.vercel.app/addJobs/${id}`, {
       method:'DELETE'
     })
     .then(res => res.json())
