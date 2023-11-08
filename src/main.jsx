@@ -19,6 +19,7 @@ import { ToastContainer } from 'react-toastify';
 import PrivateRoute from './routes/PrivateRoute';
 import JobDetails from './Pages/JobDetails';
 import { HelmetProvider } from 'react-helmet-async';
+import UpdateJob from './components/UpdateJob/UpdateJob';
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element:<Register></Register>
+      },
+      {
+        path:"/updateJob",
+        element:<UpdateJob></UpdateJob>
       },
       
     ]

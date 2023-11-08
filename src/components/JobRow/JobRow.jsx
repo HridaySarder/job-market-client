@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 
 
 
 const JobRow = ({job,handleDelete}) => {
 
-  const {_id,email,jobTitle,deadLine,description,category,minimumPrice,maximumPrice} = job;
+  const {email,jobTitle,deadLine,description,category,minimumPrice,maximumPrice} = job;
 
  
 
@@ -24,7 +26,9 @@ const JobRow = ({job,handleDelete}) => {
     
     <div className="flex justify-between">
     <button onClick={handleDelete} className="btn btn-secondary">Delete</button>
+    <Link to={'/updateJob'}>
     <button  className="btn btn-secondary">Update</button>
+    </Link>
     </div>
     
     

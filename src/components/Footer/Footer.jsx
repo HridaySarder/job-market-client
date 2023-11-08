@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="w-full md:w-1/4 mb-4 md:mb-0">
            <div className="flex items-center">
            <img className="w-12 rounded-lg" src={'https://i.ibb.co/rdycLRy/job-Marketplace-Logo.png'} alt="" />
-    <a className=" normal-case text-3xl font-bold text-emerald-500">JobMarket </a>
+    <a className=" normal-case text-3xl font-bold text-sky-500">JobMarket </a>
            </div>
             <p className="text-white mt-2">
               &copy; 2023 JobMarket. All rights reserved.

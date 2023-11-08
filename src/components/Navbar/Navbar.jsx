@@ -4,11 +4,11 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 
 const navLink = <>
-<li className="text-lg text-emerald-500"><NavLink to={"/"} >Home</NavLink></li>
-<li className="text-lg text-emerald-500"><NavLink to={"/addJob"}>Add Job</NavLink></li>
-<li className="text-lg text-emerald-500"><NavLink to={"/myPostedJobs"}>My Posted Jobs</NavLink></li>
-<li className="text-lg text-emerald-500"><NavLink to={"/myBids"}>My Bids</NavLink></li>
-<li className="text-lg text-emerald-500"><NavLink to={"/bidRequests"}>Bid Requests</NavLink></li>
+<li className="text-lg text-sky-500"><NavLink to={"/"} >Home</NavLink></li>
+<li className="text-lg text-sky-500"><NavLink to={"/addJob"}>Add Job</NavLink></li>
+<li className="text-lg text-sky-500"><NavLink to={"/myPostedJobs"}>My Posted Jobs</NavLink></li>
+<li className="text-lg text-sky-500"><NavLink to={"/myBids"}>My Bids</NavLink></li>
+<li className="text-lg text-sky-500"><NavLink to={"/bidRequests"}>Bid Requests</NavLink></li>
 
 </>
 
@@ -27,7 +27,7 @@ const Navbar = () => {
   <div className="navbar-start">
    
     <img className="w-12 rounded-lg" src={'https://i.ibb.co/rdycLRy/job-Marketplace-Logo.png'} alt="" />
-    <a className=" normal-case text-3xl font-bold text-emerald-500 ml-2">JobMarket </a>
+    <a className=" normal-case text-3xl font-bold text-sky-500 ml-2">JobMarket </a>
   </div>
  
   <div className="navbar-end">
@@ -59,13 +59,13 @@ const Navbar = () => {
               className="h-10 w-10 rounded-full"
             />
             <span className="text-lg">{user.email}</span>
-            <button onClick={handleLogOut} className="text-lg text-emerald-500">
+            <button onClick={handleLogOut} className="text-lg text-sky-500">
               Logout
             </button>
           </div>
         ) : (
           <Link to={"/login"}>
-            <button className="text-emerald-500 text-lg">Login</button>
+            <button className="text-sky-500 text-lg">Login</button>
           </Link>
         )}
   </div>
