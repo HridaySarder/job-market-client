@@ -7,13 +7,13 @@ import { Link } from "react-router-dom";
 
 const JobRow = ({job,handleDelete}) => {
 
-  const {email,jobTitle,deadLine,description,category,minimumPrice,maximumPrice} = job;
+  const {_id,email,jobTitle,deadLine,description,category,minimumPrice,maximumPrice} = job;
 
  
 
   return (
     <div>
-      <div data-aos="zoom-in-right" className="card h-80 bg-base-100 shadow-xl space-y-3">
+      <div data-aos="zoom-in-right" className="card h-96 bg-base-100 shadow-xl space-y-3">
   <div className="card-body">
     <h2 className="card-title">{email}</h2>
     <p>Title: {jobTitle}</p>
@@ -25,7 +25,7 @@ const JobRow = ({job,handleDelete}) => {
     
     
     <div className="flex justify-between">
-    <button onClick={handleDelete} className="btn btn-secondary">Delete</button>
+    <button onClick={() => handleDelete(_id)} className="btn btn-secondary">Delete</button>
     <Link to={'/updateJob'}>
     <button  className="btn btn-secondary">Update</button>
     </Link>

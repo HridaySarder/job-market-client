@@ -6,7 +6,6 @@ import { toast } from "react-toastify";
 
 const AddJob = () => {
 
-  // const location = useLocation();
 const navigate = useNavigate();
 
   const handleAddJob = event => {
@@ -36,6 +35,7 @@ const navigate = useNavigate();
   }
 
   fetch('https://assignment-11-server-site-khaki.vercel.app/addJobs',{
+   
     method:'POST',
     headers:{
       'content-type':'application/json'

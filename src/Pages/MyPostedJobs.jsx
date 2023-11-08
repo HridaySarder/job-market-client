@@ -28,7 +28,7 @@ const handleDelete = id => {
     .then(data => {
       console.log(data);
       if(data.deletedCount > 0){
-        toast.err("Job deleted Successfully", {
+        toast.error("Job deleted Successfully", {
           position: "top-right",
           autoClose: 3000, 
           hideProgressBar: false,
