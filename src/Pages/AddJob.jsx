@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import {  useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -61,7 +62,11 @@ const navigate = useNavigate();
   }
 
   return (
+
     <div className="my-10">
+      <Helmet>
+        <title>JobMarket | AddJob</title>
+      </Helmet>
        <div className="bg-[#F4F3F0] p-24 ">
       <h2 className="font-extrabold text-5xl text-center text-[#039be5]">Add Job</h2>
       <form onSubmit={handleAddJob}>

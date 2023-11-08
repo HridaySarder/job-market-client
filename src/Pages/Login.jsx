@@ -3,6 +3,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { toast } from "react-toastify";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
 
@@ -82,6 +83,9 @@ const navigate = useNavigate();
 
   return (
     <div className="bg-[#F4F3F0] mb-10">
+      <Helmet>
+        <title>JobMarket | Login</title>
+      </Helmet>
    
     <div>
       <h2 className="text-5xl pt-10 text-center my-10 text-[#039be5] font-bold">

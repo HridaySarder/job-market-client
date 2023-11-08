@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import JobRow from "../components/JobRow/JobRow";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -44,7 +45,9 @@ const handleDelete = id => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-    
+    <Helmet>
+      <title>JobMarket | MyPostedJobs</title>
+    </Helmet>
 
  
       {

@@ -18,6 +18,7 @@ import AuthProvider from './providers/AuthProvider';
 import { ToastContainer } from 'react-toastify';
 import PrivateRoute from './routes/PrivateRoute';
 import JobDetails from './Pages/JobDetails';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -65,9 +66,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <HelmetProvider>
     <AuthProvider>
     <RouterProvider router={router} />
     </AuthProvider>
+    </HelmetProvider>
     <ToastContainer></ToastContainer>
   </React.StrictMode>,
 )

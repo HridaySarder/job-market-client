@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { AuthContext } from "../providers/AuthProvider";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -72,7 +73,9 @@ e.target.reset()
 
   return (
     <div className="bg-[#F4F3F0] mb-10">
-    
+    <Helmet>
+      <title>JobMarket | Register</title>
+    </Helmet>
     <div>
       <ToastContainer />
       <h2 className="text-5xl pt-10 text-center my-10 text-[#039be5] font-bold">
